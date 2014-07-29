@@ -29,6 +29,7 @@
     "jshint": "^2.5.2",
     "mocha": "~1.17.0",
     "mongoose": "^3.8.14",
-    "mongoose-password-bcrypt-nodejs": "^0.1.1"
+    "mongoose-password-bcrypt-nodejs": "^0.1.1",
+    "supertest": "^0.13.0"
   }
 }

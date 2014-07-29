@@ -2,12 +2,13 @@
 
 var expect = require('chai').expect;
 var mongoose = require('mongoose');
+var request = require('supertest');
 var passwords = require('mongoose-password-bcrypt-nodejs');
 
 describe('passport-mongoose-serializer', function() {
   var User, bob;
 
-  beforeEach(function(done) {
+  before(function(done) {
     var conn = mongoose.createConnection('mongodb://localhost:27017/test');
 
     var UserSchema = new mongoose.Schema({
@@ -23,9 +24,12 @@ describe('passport-mongoose-serializer', function() {
       password: 'mfw'
     });
     bob.save(done);
+
+    require('..')(User);
   });
 
-  afterEach(function(done) {
+
+  after(function(done) {
     User.find().remove().exec(done);
   });
 });
