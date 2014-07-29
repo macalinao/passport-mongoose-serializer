@@ -8,6 +8,6 @@ module.exports = function(model) {
   });
 
   passport.deserializeUser(function(id, done) {
-    User.findById(id, done);
+    model.findById(id, done);
   });
 };
