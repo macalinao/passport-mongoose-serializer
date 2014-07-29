@@ -1,4 +1,4 @@
-# passp
+# passport-mongoose-serializer
 
 Provides passport serialization for a mongoose model.
 
